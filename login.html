@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 - 보안 결제 - Apple (KR)</title>
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media-Query.css" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <!-- ================== navi ================== -->
+    <!-- pc-nav -->
+    <nav id="nav">
+      <h1 class="logo">
+        <a href="index.html"
+          ><img src="images/apple-logo.png" alt="apple-logo"
+        /></a>
+      </h1>
+      <ul class="nav-menu">
+        <li><a href="#void">Mac</a></li>
+        <li><a href="#void">iPad</a></li>
+        <li><a href="#void">iPhone</a></li>
+        <li><a href="#void">Watch</a></li>
+        <li><a href="#void">Music</a></li>
+        <li><a href="#void">고객지원</a></li>
+      </ul>
+      <ul class="gnb">
+        <li>
+          <a href="#void"><img src="images/gnb-cart.png" alt="icon-cart" /></a>
+        </li>
+        <li>
+          <a href="#void"
+            ><img src="images/gnb-search.png" alt="icon-search"
+          /></a>
+        </li>
+        <li>
+          <a href="login.html">
+            <img src="images/gnb-account.png" alt="icon-account" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- mobile-nav -->
+    <div class="m-nav">
+      <!-- nav-top -->
+      <ul class="m-nav-header">
+        <li class="m-nav__hamBtn">
+          <a class="m-nav__hamBtn-icon" href="#void">
+            <span class="hamBtn-1"></span>
+            <span class="hamBtn-2"></span>
+            <span class="hamBtn-3"></span>
+          </a>
+        </li>
+        <li class="m-nav__logo">
+          <a href="index.html"
+            ><img src="images/m-apple-logo.png" alt="mobile-apple-logo"
+          /></a>
+        </li>
+        <li class="m-nav__account-icon">
+          <a href="login.html"></a>
+        </li>
+      </ul>
+      <!-- menu -->
+      <ul class="m-nav-menu">
+        <li><a href="#void">Mac</a></li>
+        <li><a href="#void">iPad</a></li>
+        <li><a href="#void">iPhone</a></li>
+        <li><a href="#void">Watch</a></li>
+        <li><a href="#void">Music</a></li>
+        <li><a href="#void">고객지원</a></li>
+      </ul>
+    </div>
+
+    <!-- ================== login ================== -->
+    <div class="loginWrap">
+      <div class="container clearFix">
+        <div class="login">
+          <h2>로그인</h2>
+          <form method="GET" id="login-form">
+            <input
+              type="text"
+              name="id"
+              class="input-id"
+              placeholder="Apple ID"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              class="input-pass"
+              placeholder="암호"
+              required
+            />
+          </form>
+          <p>
+            Apple ID는 iTunes, App Store, iCloud에 로그인할 때 사용하는 이메일
+            주소입니다.
+          </p>
+          <button class="loginBtn" type="submit">로그인</button>
+          <a href="#void">Apple ID 또는 암호를 잊으셨나요?</a>
+          <button class="signBtn" type="submit">회원가입</button>
+        </div>
+        <div class="imgWrap">
+          <img src="" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ================== footer ================== -->
+    <footer>
+      <div class="footer clearFix">
+        <div class="center">
+          <div class="footer-logo">
+            <img src="images/apple-logo.png" alt="footer-apple-logo" />
+          </div>
+          <div class="footer-top clearFix">
+            <small>Copyright © 2021 Apple Inc. 모든 권리 보유.</small>
+            <ul>
+              <li><a href="#">개인정보 처리방침</a></li>
+              <li><a href="#">웹 사이트 이용 약관</a></li>
+              <li><a href="#">팬매 및 환불</a></li>
+              <li><a href="#">법적 고지</a></li>
+              <li><a href="#">사이트 맵</a></li>
+            </ul>
+          </div>
+          <p>
+            사업자등록번호 : 120-81-84429 | 통신판매업신고번호 : 제
+            2011-서울강남-00810호 | 대표이사 : PETER DENWOOD | 주소 : 서울
+            특별시 강남구 영동대로 517 | 대표전화 : 02-6712-6700 | 팩스 :
+            02-6928-0000
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,825 @@
+/* ================================================================
+                            nav (h:110px)
+===================================================================*/
+
+/* --------------------- pc - nav --------------------- */
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 110px;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 0 80px;
+}
+.logo {
+  float: left;
+}
+/* menu */
+.nav-menu {
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+.nav-menu > li {
+  position: relative;
+}
+.nav-menu > li:hover a {
+  color: #353535;
+}
+.nav-menu > li:hover::before {
+  display: block;
+}
+.nav-menu > li::before {
+  content: "";
+  display: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #353535;
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+}
+.nav-menu > li > a {
+  color: #8d8d8d;
+  font-weight: 500;
+}
+/* gnb */
+.gnb {
+  float: right;
+}
+.gnb > li {
+  float: left;
+  margin-right: 30px;
+}
+.gnb > li:last-child {
+  margin-right: 0;
+}
+/* --------------------- mobile - nav(header) ------------------- */
+.m-nav {
+  display: none;
+}
+.m-nav-header {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(8, 8, 8);
+}
+.m-nav__hamBtn {
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.m-nav__hamBtn-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.m-nav__hamBtn-icon,
+.m-nav__hamBtn-icon span {
+  display: inline-block;
+  transition: all 0.4s;
+  box-sizing: border-box;
+}
+.m-nav__hamBtn-icon span {
+  position: absolute;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: white;
+}
+.m-nav__hamBtn-icon span:first-child {
+  top: 0;
+}
+.m-nav__hamBtn-icon span:nth-child(2) {
+  top: 10px;
+}
+.m-nav__hamBtn-icon span:last-child {
+  bottom: 0;
+}
+.m-nav__account-icon {
+  height: 50px;
+  width: 50px;
+}
+.m-nav__account-icon a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../images/m-gnb-account.png) no-repeat center;
+}
+/* hamBtn - x자 애니메이션 (접혔다 펴지기)*/
+.m-nav__hamBtn-icon span:nth-of-type(1) {
+  -webkit-animation: menu-bar-line-ani 0.75s forwards;
+  animation: menu-bar-line-ani 0.75s forwards;
+}
+@-webkit-keyframes menu-bar-line-ani {
+  0% {
+    -webkit-transform: translateY(10px) rotate(45deg);
+  }
+  50% {
+    -webkit-transform: translateY(10px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0);
+  }
+}
+@keyframes menu-bar-line-ani {
+  0% {
+    transform: translateY(10px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+.m-nav__hamBtn-icon span:nth-of-type(2) {
+  transition: all 0.25s 0.25s;
+  opacity: 1;
+}
+.m-nav__hamBtn-icon span:nth-of-type(3) {
+  -webkit-animation: menu-bar-line-ani-2 0.75s forwards;
+  animation: menu-bar-line-ani-2 0.75s forwards;
+}
+@-webkit-keyframes menu-bar-line-ani-2 {
+  0% {
+    -webkit-transform: translateY(-10px) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: translateY(-10px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0);
+  }
+}
+@keyframes menu-bar-line-ani-2 {
+  0% {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+.m-nav__hamBtn-icon.active span:nth-of-type(1) {
+  -webkit-animation: active-menu-bar-line-ani 0.75s forwards;
+  animation: active-menu-bar-line-ani 0.75s forwards;
+}
+@-webkit-keyframes active-menu-bar-line-ani {
+  0% {
+    -webkit-transform: translateY(0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translateY(10px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(10px) rotate(45deg);
+  }
+}
+@keyframes active-menu-bar-line-ani {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(10px) rotate(0);
+  }
+  100% {
+    transform: translateY(10px) rotate(45deg);
+  }
+}
+.m-nav__hamBtn-icon.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.m-nav__hamBtn-icon.active span:nth-of-type(3) {
+  -webkit-animation: active-menu-bar-line-ani-2 0.75s forwards;
+  animation: active-menu-bar-line-ani-2 0.75s forwards;
+}
+@-webkit-keyframes active-menu-bar-line-ani-2 {
+  0% {
+    -webkit-transform: translateY(0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(-10px) rotate(-45deg);
+  }
+}
+@keyframes active-menu-bar-line-ani-2 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0);
+  }
+  100% {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}
+
+/* --------------------- mobile - nav(menu) ------------------- */
+.m-nav {
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  box-sizing: border-box;
+}
+.m-nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.m-nav-menu {
+  display: none;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  top: 50px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 30px 50px;
+  box-sizing: border-box;
+  background: #000000;
+}
+.m-nav-menu > li {
+  text-align: center;
+  padding: 15px 0;
+}
+.m-nav-menu > li > a {
+  font-size: 2rem;
+  color: #8d8d8d;
+  font-weight: 500;
+}
+.m-nav-menu > li:hover a {
+  color: #fff;
+}
+.m-nav-menu > li:hover::before {
+  opacity: 0;
+}
+/* ================================================================
+                           mainBanner(silde)
+  ===================================================================*/
+.mainBanner {
+  max-width: 100%;
+  height: 859px;
+  overflow: hidden;
+  position: relative;
+}
+.banner {
+  width: 300%;
+  height: 100%;
+}
+.banner > li {
+  float: left;
+  width: 33.3333%;
+  height: 100%;
+}
+.banner > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.b-1 > a {
+  background: url(../images/mainBanner-1.jpg) no-repeat center center;
+}
+.b-2 > a {
+  background: url(../images/mainBanner-2.jpg) no-repeat center center;
+}
+
+/* circle - button */
+.circleBtn {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+}
+.circleBtn > li {
+  float: left;
+  margin-right: 10px;
+  width: 13px;
+  height: 13px;
+  background-color: #dedede;
+  border-radius: 50%;
+}
+.circleBtn > .active {
+  width: 30px;
+  height: 13px;
+  background-color: white;
+  border-radius: 6.5px;
+}
+.circleBtn > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ================================================================
+                      container --- 1) quick-menu
+  ===================================================================*/
+.title {
+  text-align: center;
+  padding: 100px 0;
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+.title > span {
+  font-weight: 600;
+}
+.center {
+  width: 1400px;
+  margin: 0 auto;
+}
+/* quick-menu - menu(6) */
+.quick-menuWrap {
+  width: 100%;
+  background: #fafafa;
+}
+.quick-menu {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  padding-bottom: 50px;
+}
+.quick-menu > li {
+  overflow: hidden;
+  position: relative;
+  background: #f3f3f3;
+}
+.quick-menu > li:hover {
+  box-shadow: 5px 5px 10px #dddd;
+}
+.quick-menu > li:hover img {
+  transform: scale(1.05);
+  transition: 0.5s linear;
+}
+.quick-menu > li:hover .gradient-box {
+  opacity: 1;
+}
+.quick-menu > li > a {
+  display: block;
+  height: 100%;
+}
+/* menu -text-box */
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 300px;
+  transform: translateY(-50%);
+}
+.text-box > p {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.text-box > span {
+  font-size: 1.4rem;
+}
+/* hover - gradient-box */
+.gradient-box {
+  display: block;
+  /* width: 430px; */
+  height: 150px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.5s linear;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e5e5e5+0,000000+99&0+0,0.5+100 */
+  background: -moz-linear-gradient(
+    top,
+    rgba(229, 229, 229, 0) 0%,
+    rgba(0, 0, 0, 0.5) 99%,
+    rgba(0, 0, 0, 0.5) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(229, 229, 229, 0) 0%,
+    rgba(0, 0, 0, 0.5) 99%,
+    rgba(0, 0, 0, 0.5) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(229, 229, 229, 0) 0%,
+    rgba(0, 0, 0, 0.5) 99%,
+    rgba(0, 0, 0, 0.5) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e5e5e5', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
+}
+/* ================================================================
+                    container --- 2) select-watch
+===================================================================*/
+.select-watch {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #f2f2f2;
+  text-align: center;
+  padding: 20px 0 80px;
+  overflow: hidden;
+}
+.select-watch .title {
+  padding-bottom: 0;
+  margin-bottom: 36px;
+}
+.moreBtn {
+  margin-bottom: 80px;
+}
+.moreBtn span:last-child {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(../images/more_03.png) no-repeat center center;
+}
+.moreBtn > a > span {
+  font-size: 2rem;
+  color: #0084ff;
+  line-height: 2rem;
+}
+/* #################### watch-itme #################### */
+.watch-item-wrap {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 100px;
+}
+.watch-item {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  text-align: start;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  transition: 0.5s;
+}
+.watch-item .circle {
+  /* ---------------- circle만들어질 네모 박스 자리 (배경 없음 ) */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.watch-item:hover .circle {
+  /* ---------------- circle만들어질 네모 박스 자리 (hover했을 때 그림자) */
+  box-shadow: 50px 50px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+/*  ---------------- circle */
+.watch-item .circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #7986cb;
+  clip-path: circle(100px at center);
+  transition: 0.5s;
+}
+.item-2 .circle::before {
+  clip-path: circle(130px at center);
+}
+/* ---------------- circle => rectangle */
+.watch-item:hover .circle::before {
+  background: linear-gradient(to top, #152168, #3f51b5);
+  clip-path: circle(400px at center);
+}
+/* item-2 */
+.item-2 .circle::before {
+  background: #ffccbc;
+}
+.item-2:hover .circle::before {
+  background: linear-gradient(to top, #ff6658, #ff8a80);
+}
+/* item-3 */
+.item-3 .circle::before {
+  background: #9e9e9e;
+}
+.item-3:hover .circle::before {
+  background: linear-gradient(to top, #070707, #212121);
+}
+/* ---------------- watch image 조정 */
+.watch-item img {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  height: 350px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.item-2 img {
+  height: 480px;
+}
+.watch-item:hover img {
+  top: 40%;
+  left: 90%;
+  height: 300px;
+}
+/* ---------------- text-box */
+.watch-item .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 20%;
+  padding: 40px 20px 20px 40px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.watch-item:hover .content {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.watch-item .content h2 {
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.watch-item .content p,
+.watch-item .content span {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgb(156, 156, 156);
+  word-break: keep-all;
+}
+.watch-item .content p {
+  color: rgb(192, 192, 192);
+  margin-top: 15px;
+  line-height: 2.8;
+}
+/* ---------------- item-2 / text-box */
+.item-2 .content h2 {
+  color: #c85a54;
+}
+.item-2 .content span {
+  color: #ffd6ca;
+}
+.item-2 .content p {
+  color: white;
+}
+/*----------------  more button(2) */
+.pickBtn,
+.moreBtn-inner {
+  display: inline-block;
+  margin-right: 10px;
+}
+.pickBtn a,
+.moreBtn-inner a {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  color: black;
+  padding: 1px 15px;
+  border-radius: 10px;
+  background: white;
+  margin-top: 5px;
+  font-weight: 700;
+}
+.moreBtn-inner a {
+  background-color: black;
+  color: white;
+}
+.item-2 .moreBtn-inner a {
+  background: #c85a54;
+}
+
+/* ================================================================
+                    container --- 3) s-banner
+===================================================================*/
+.s-banner-wrap {
+  overflow: hidden;
+  padding: 0 0 70px 0;
+  background: url(../images/s-banner-bg.png) no-repeat center;
+}
+.s-banner-wrap > h2 {
+  color: #382c3d;
+  padding: 80px 0;
+}
+.s-banner-slider {
+  width: 100%;
+  margin: 0 auto;
+}
+.slick-track {
+  padding-bottom: 53px;
+}
+.slick-slide {
+  color: #000;
+  margin: 0 50px;
+  opacity: 0.6;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.slider-item img {
+  width: 100%;
+  height: 100%;
+}
+.slick-current {
+  opacity: 1;
+  box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.3);
+}
+/* circleBtn */
+.slick-dots li {
+  display: inline-block;
+  background: rgb(141, 99, 99);
+  border-radius: 50%;
+}
+.slick-dots li button {
+  opacity: 0;
+}
+.slick-dots li.slick-active {
+  background: rgb(173, 81, 81);
+}
+/* ================================================================
+                      container --- 4) accessory
+  ===================================================================*/
+.acc-wrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: auto;
+  background-color: #fafafa;
+}
+.acc-wrap > div {
+  height: 485px;
+}
+.acc-1-img {
+  width: 100%;
+  height: 100%;
+  background: url(../images/accessory-item_02.png) no-repeat center;
+}
+.acc-4-img {
+  width: 100%;
+  height: 100%;
+  background: url(../images/accessory-item_05.png) no-repeat center;
+}
+.acc-2-text-box,
+.acc-3-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.acc-2-text-box h3,
+.acc-3-text-box h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.acc-2-text-box span,
+.acc-3-text-box span {
+  font-size: 2.4rem;
+}
+.acc-2-text-box,
+.acc-3-text-box span {
+  margin-bottom: 10px;
+}
+.acc-2-text-box,
+.acc-3-text-box h3 {
+  margin-bottom: 0;
+}
+/* button */
+.grd-btn {
+  position: relative;
+  display: block;
+  width: 250px;
+  height: 60px;
+  margin-top: 50px;
+  border-radius: 30px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcff00+0,ff7e00+25,a800ff+50,0060ff+75,45ffa5+100 */
+  background: rgb(252, 255, 0); /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    rgba(252, 255, 0, 1) 0%,
+    rgba(255, 126, 0, 1) 25%,
+    rgba(168, 0, 255, 1) 50%,
+    rgba(0, 96, 255, 1) 75%,
+    rgba(69, 255, 165, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    rgba(252, 255, 0, 1) 0%,
+    rgba(255, 126, 0, 1) 25%,
+    rgba(168, 0, 255, 1) 50%,
+    rgba(0, 96, 255, 1) 75%,
+    rgba(69, 255, 165, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    rgba(252, 255, 0, 1) 0%,
+    rgba(255, 126, 0, 1) 25%,
+    rgba(168, 0, 255, 1) 50%,
+    rgba(0, 96, 255, 1) 75%,
+    rgba(69, 255, 165, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcff00', endColorstr='#45ffa5',GradientType=1 ); /* IE6-9 */
+}
+.grd-btn:hover a {
+  background-color: rgb(34, 34, 34);
+  color: white;
+  transition: 0.3s linear;
+}
+.grd-btn a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  font-size: 2rem;
+  line-height: 50px;
+  width: 240px;
+  height: 50px;
+  border-radius: 25px;
+  text-align: center;
+  background-color: white;
+}
+/* ================================================================
+                      container --- 5) miniBanner
+  ===================================================================*/
+.miniBanner {
+  position: relative;
+  width: 100%;
+  height: 565px;
+  background: url(../images/mini-banner_02.png) no-repeat center;
+}
+.miniBanner .moreBtn span {
+  font-weight: 700;
+}
+.mini-text-box {
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.mini-text-box h4 {
+  width: 50%;
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.mini-text-box p {
+  font-size: 2rem;
+  font-weight: 200;
+  margin-bottom: 30px;
+}
+
+/* ================================================================
+                              footer
+  ===================================================================*/
+footer {
+  background-color: #dddddd;
+}
+.footer-logo {
+  padding: 30px 0;
+}
+.footer-top {
+  border-top: 1px solid #878787;
+  padding-top: 20px;
+  color: #797979;
+}
+.footer-top small {
+  float: left;
+  margin-right: 30px;
+}
+.footer-top > ul > li {
+  float: left;
+  font-size: 1.2rem;
+}
+.footer-top > ul > li > a {
+  color: #797979;
+}
+.footer p {
+  font-size: 1.2rem;
+  padding: 5px 0 20px 0;
+  color: #797979;
+}

@@ -1,0 +1,74 @@
+/* 블럭요소에 있는 모든 여백제거 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+ul,
+ol,
+li,
+p,
+form,
+fieldset,
+button,
+input,
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+
+/* li 장식 제거 */
+li {
+  list-style: none;
+}
+/* a 글자색, 밑줄 */
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*  이미지 와 글자의 정렬로 생기는 여백 제거 */
+img {
+  vertical-align: top;
+}
+/* i,em,address 기울여진 글자 바로 */
+i,
+em,
+address {
+  font-style: normal;
+}
+/* 마우스 모양 */
+label {
+  cursor: pointer;
+}
+/* 기본글씨체, 크기, 줄간격, 색상 */
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+/* section제목으로 입력한 내용을 화면에서만 사라지게, 리더기로는 읽을수 있도록 */
+.blind {
+  position: absolute;
+  top: -9999px;
+}
+
+/* 모든 자식이 float되면 부모가 사라진다, 찾기 */
+.clearFix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+hr {
+  display: none;
+}
+/* .skip  홈페이지에 접소하여 마우스가 안될경우 tab키를 눌렀을때 메인메뉴와, 본문으로 바로 갈수 있도록 바로가기 메뉴 넣기 */

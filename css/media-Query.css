@@ -1,0 +1,563 @@
+/* body {
+  min-width: 320px;
+} */
+@media screen and (max-width: 1500px) {
+  /* common */
+  .center {
+    width: 100%;
+  }
+  /* common padding -left/right */
+  .quick-menuWrap,
+  .select-watch,
+  .miniBanner,
+  footer {
+    padding: 0 50px;
+    box-sizing: border-box;
+  }
+
+  /* container(1-5) */
+  /* container - 2) select-watch */
+  .select-watch {
+    padding: 0 100px;
+  }
+  .watch-item img {
+    height: 70%;
+  }
+  .watch-item:hover img {
+    height: 18vw;
+  }
+  /* container - 4) accessory */
+  .acc-wrap > div {
+    height: 30vw;
+  }
+  .acc-1-img,
+  .acc-4-img {
+    background-size: cover;
+  }
+  /* container - 5) mini-text-box */
+  .miniBanner {
+    height: 50vw;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  /* container(1-5) */
+  /* container - 1) quick-menu */
+  .quick-menuWrap {
+    padding: 0 0 60px;
+  }
+  .quick-menu {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    height: 60vw;
+  }
+  .quick-menu img {
+    width: auto;
+    height: 19vw;
+  }
+  .text-box {
+    left: 60%;
+  }
+  .text-box p {
+    font-size: 2.2vw;
+  }
+  .text-box span {
+    font-size: 2vw;
+  }
+
+  /* container - 2) select-watch */
+  .select-watch {
+    padding: 0 50px;
+  }
+  .watch-item:hover .circle {
+    /* ---------------- circle만들어질 네모 박스 자리 (hover했을 때 그림자) */
+    box-shadow: 25px 25px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+  }
+}
+
+/* ==================== Desktops - 1280px ==================== */
+@media screen and (max-width: 1280px) {
+  .nav-menu {
+    width: 60%;
+  }
+  /* container(1-5) */
+  /* container - 2) select-watch */
+  .watch-item-wrap {
+    flex-wrap: wrap;
+  }
+  .watch-item {
+    width: 49%;
+    height: auto;
+  }
+  /*  ---------------- circle */
+  .watch-item .circle::before,
+  .item-2 .circle::before {
+    clip-path: circle(130px at center);
+  }
+  /* ---------------- watch image 조정 */
+  .watch-item img,
+  .item-2 img {
+    top: 60%;
+    left: 60%;
+    height: 50%;
+    height: 350px;
+  }
+  .watch-item:hover img {
+    top: 40%;
+    left: 78%;
+    height: 20vw;
+  }
+  /* ---------------- text-box */
+  .watch-item .content {
+    padding: 30px;
+  }
+  .watch-item .content p {
+    line-height: 2;
+  }
+  /* container - 3) s-banner */
+  .slick-slide {
+    margin: 0 20px;
+  }
+  /* container - 5) miniBanner */
+  .mini-text-box p {
+    width: 60%;
+  }
+
+  .loginWrap .center {
+    width: 100%;
+    height: 100%;
+    background: slateblue;
+  }
+}
+/* ==================== Tablets(landscape) - 1024px ====================*/
+@media screen and (max-width: 1024px) {
+  .mainBanner {
+    height: 50vw;
+  }
+  /* container(1-5) */
+  /* container - 2) select-watch */
+  /* ---------------- watch image 조정 */
+  .watch-item:hover img {
+    top: 35%;
+    left: 80%;
+    height: 20vw;
+  }
+  /* ---------------- text-box */
+  .watch-item .content {
+    padding: 30px;
+  }
+  .watch-item .content p {
+    line-height: 2;
+  }
+  /* container - 5) miniBanner */
+  .mini-text-box h4 {
+    width: 50%;
+    font-size: 3vw;
+    margin-bottom: 2vw;
+  }
+  .mini-text-box p {
+    width: 50%;
+    font-size: 1.8vw;
+    margin-bottom: 3vw;
+  }
+
+  /* ###### login ###### */
+  .loginWrap {
+    flex-wrap: nowrap;
+  }
+  .imgWrap {
+    display: none;
+  }
+  .login {
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(32, 32, 32, 0.158);
+  }
+}
+
+/* ==================== Tablets(portrait) - 768px ==================== */
+@media screen and (max-width: 768px) {
+  #nav {
+    display: none;
+  }
+  .m-nav {
+    display: block;
+  }
+
+  .circleBtn > li {
+    width: 8px;
+    height: 8px;
+  }
+  .circleBtn > .active {
+    width: 25px;
+    height: 8px;
+  }
+
+  /* container(1-5) */
+  /* container - common */
+  .title {
+    text-align: center;
+    padding: 10vw 0;
+    font-size: 4vw;
+    font-weight: 400;
+  }
+  .moreBtn {
+    margin-bottom: 50px;
+  }
+  .moreBtn > a > span {
+    font-size: 2.5vw;
+  }
+  .moreBtn span:last-child {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  /* container - 1) quick-menu */
+  .quick-menuWrap {
+    padding: 0 0 60px;
+  }
+  .quick-menu {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    height: 80vw;
+  }
+  .quick-menu img {
+    width: auto;
+    height: 27vw;
+  }
+  .text-box {
+    left: 65%;
+  }
+  .text-box p {
+    font-size: 2.2vw;
+  }
+
+  /* container - 2) select-watch */
+  .watch-item-wrap {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .watch-item {
+    width: 100%;
+    height: auto;
+  }
+  /*  ---------------- circle */
+  .watch-item .circle::before,
+  .item-2 .circle::before {
+    clip-path: circle(130px at center);
+  }
+  /* ---------------- watch image 조정 */
+  .watch-item img,
+  .item-2 img {
+    top: 60%;
+    left: 60%;
+    height: 50%;
+    height: 300px;
+  }
+  .watch-item:hover img {
+    top: 30vw;
+    left: 78%;
+    height: 35vw;
+  }
+  /* ---------------- text-box */
+  .watch-item .content {
+    padding: 30px;
+  }
+  .watch-item .content p {
+    line-height: 2;
+  }
+
+  /* container - 3) s-banner */
+  .s-banner-wrap {
+    padding: 0 0 50px 0;
+  }
+  .s-banner-wrap > h2 {
+    padding: 50px 0;
+  }
+  .slick-slide {
+    border-radius: 20px;
+  }
+  /* container - 4) accessory */
+  .grd-btn a {
+    font-size: 2vw;
+  }
+}
+
+/* ==================== Smartphones(landscape) - 480px ==================== */
+@media screen and (max-width: 480px) {
+  .circleBtn {
+    display: none;
+  }
+
+  /* container(1-5) */
+  /* container - common */
+  .title {
+    text-align: center;
+    padding: 10vw 0;
+    font-size: 6vw;
+    font-weight: 400;
+  }
+  .select-watch .title {
+    width: 60%;
+  }
+  .moreBtn {
+    margin-bottom: 50px;
+  }
+  .moreBtn > a > span {
+    font-size: 5vw;
+  }
+  .moreBtn span:last-child {
+    width: 4vw;
+    height: 4vw;
+  }
+
+  /* container - 1) quick-menu */
+  .quick-menuWrap {
+    padding: 0;
+  }
+
+  /* container - 2) select-watch */
+  /* common */
+  .select-watch {
+    padding: 0 30px;
+  }
+  .select-watch .title {
+    margin-bottom: 30px;
+  }
+  .watch-item {
+    text-align: center;
+  }
+  .watch-item:hover .circle {
+    box-shadow: none;
+  }
+  /*  ---------------- circle */
+  .watch-item .circle::before,
+  .watch-item:hover .circle::before,
+  .item-2:hover .circle::before,
+  .item-3:hover .circle::before {
+    display: none;
+  }
+
+  /* ---------------- watch image 조정 */
+  .watch-item img,
+  .item-2 img {
+    top: 35%;
+    left: 50%;
+    height: 45vw;
+  }
+  .watch-item:hover img {
+    top: 35%;
+    left: 50%;
+    height: 45vw;
+  }
+  /* ---------------- text-box */
+  .watch-item .content {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    padding: 250px 30px 30px 30px;
+  }
+  .watch-item .content h2 {
+    font-size: 20px;
+    color: black;
+  }
+  .watch-item .content span {
+    display: block;
+    font-weight: 400;
+    color: rgb(37, 37, 37);
+  }
+  .watch-item .content p {
+    line-height: 2.5;
+  }
+  .watch-item .description {
+    display: none;
+  }
+  .item-2 .moreBtn-inner a {
+    background: black;
+  }
+
+  /* container - 3) s-banner */
+  .slick-slide {
+    border-radius: 0;
+    margin: 0 auto;
+  }
+  .s-banner-wrap > h2 {
+    padding: 30px 0;
+  }
+  .s-banner-wrap > h2 span {
+    display: block;
+  }
+  .s-banner-wrap {
+    padding: 0 0 30px 0;
+  }
+  .slick-current {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  }
+  /* container - 4) accessory */
+  .acc-wrap {
+    grid-template-columns: 1fr;
+    grid-row: auto;
+    background-color: #fafafa;
+  }
+  .acc-wrap > div {
+    height: 50vw;
+  }
+  .acc-wrap > div:nth-child(3) {
+    order: 4;
+  }
+  .acc-2-text-box h3,
+  .acc-3-text-box h3 {
+    font-size: 5vw;
+  }
+  .acc-2-text-box span,
+  .acc-3-text-box span {
+    font-size: 4vw;
+  }
+  .acc-2-text-box span,
+  .acc-3-text-box span {
+    margin-bottom: 1.5vw;
+  }
+  .grd-btn {
+    width: 50vw;
+    height: 8vw;
+    margin-top: 2vw;
+  }
+  .grd-btn a {
+    font-size: 3vw;
+    line-height: 7vw;
+    width: 48.5vw;
+    height: 7vw;
+  }
+
+  /* container - 5) miniBanner */
+  .mini-text-box h4 {
+    width: 60%;
+    font-size: 3.8vw;
+    margin-bottom: 2vw;
+  }
+  .mini-text-box > p {
+    display: none;
+  }
+  .mini-text-box > .moreBtn {
+    display: block;
+  }
+  .mini-text-box > .moreBtn span {
+    font-size: 3vw;
+  }
+
+  /* ###### login ###### */
+  .container {
+    width: 100%;
+    box-shadow: none;
+  }
+  .login {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+  }
+}
+
+/* ==================== Smartphones(portrait) - 360px ==================== */
+@media screen and (max-width: 360px) {
+  .m-nav {
+    border-bottom: 1px solid rgb(51, 51, 51);
+  }
+  /* container - 2) select-watch */
+  /* ---------------- watch image 조정 */
+  .watch-item img,
+  .item-2 img {
+    top: 35%;
+    left: 50%;
+    height: 60vw;
+  }
+  .watch-item:hover img {
+    top: 35%;
+    left: 50%;
+    height: 60vw;
+  }
+  /* ---------------- text-box */
+  .watch-item .content h2 {
+    font-size: 5vw;
+  }
+  /*----------------  more button */
+  .pickBtn,
+  .moreBtn-inner {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .pickBtn a,
+  .moreBtn-inner a {
+    padding: 2px 10px;
+  }
+  /* container - 5) miniBanner */
+  .miniBanner {
+    position: relative;
+  }
+  .mini-text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  .mini-text-box h4 {
+    width: 70%;
+    font-size: 4.5vw;
+  }
+
+  /* ###### login ###### */
+  .loginWrap {
+    padding: 50px 0 100px;
+    background: #0a0a0a;
+  }
+  .container {
+    width: 100%;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+  .login {
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px;
+    background: transparent;
+  }
+  .login h2 {
+    color: #fff;
+    padding-bottom: 20px;
+  }
+  .login input {
+    background: none;
+    border-radius: 10px;
+    color: #fff;
+  }
+  .login input::placeholder {
+    color: rgb(151, 151, 151);
+  }
+  .login p {
+    color: rgb(165, 165, 165);
+    font-weight: 300;
+  }
+  .login a {
+    font-size: 1.4rem;
+  }
+  .signBtn,
+  .loginBtn {
+    box-shadow: none;
+  }
+  .loginBtn {
+    background: #fff;
+    color: #000;
+    font-weight: 700;
+  }
+}
+
+/* ==================== Smartphones(portrait) - 320px ==================== */
+@media screen and (max-width: 320px) {
+}
